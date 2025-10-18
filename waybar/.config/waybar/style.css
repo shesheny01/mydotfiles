@@ -12,6 +12,11 @@
   font-size: 12px;
 }
 
+#waybar {
+    background-color: rgba(38, 42, 51, 0); /* #262A33 with 20% opacity */
+    color: @foreground;
+}
+
 .modules-left {
   margin-left: 8px;
 }

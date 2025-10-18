@@ -137,6 +137,7 @@
   },
   "hyprland/language": {
     "format": "{}",
-    "on-click": "hyprctl switchxkblayout your-keyboard-name-here next"
+    "on-click": "hyprctl switchxkblayout your-keyboard-name-here next",
+    "spacing": 12,
 }
 }

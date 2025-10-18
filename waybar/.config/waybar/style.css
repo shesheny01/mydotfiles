@@ -3,6 +3,7 @@
 * {
   background-color: @background;
   color: @foreground;
+  opacity: 1;
 
   border: none;
   border-radius: 0;

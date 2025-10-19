@@ -18,17 +18,29 @@
 }
 
 .modules-left {
-  margin-left: 8px;
-  background-color: rgba(0, 136, 171, 0.4);
-}
+  background-color: alpha(@accent, 0.50);
+  border-radius: 20px;          /* Makes the bubble shape */
+  padding: 4px 10px;            /* Adds inner spacing */
+  margin: 4px 8px;             /* Keeps distance from edges */
+  /* Optional: smooth glassy effect */
+  box-shadow: 0 2px 6px alpha(@background, 0.4); }
 
 .modules-right {
-  margin-right: 8px;
-  background-color: rgba(0, 136, 171, 0.4);
+  background-color: alpha(@accent, 0.50);
+  border-radius: 20px;          /* Makes the bubble shape */
+  padding: 4px 10px;            /* Adds inner spacing */
+  margin: 4px 8px;              /* Keeps distance from edges */
+  /* Optional: smooth glassy effect */
+  box-shadow: 0 2px 6px alpha(@background, 0.4); 
 }
 
 .modules-center {
-  background-color: rgba(0, 136, 171, 0.4);
+  background-color: alpha(@accent, 0.50);
+  border-radius: 20px;          /* Makes the bubble shape */
+  padding: 4px 10px;            /* Adds inner spacing */
+  margin: 4px 8px;              /* Keeps distance from edges */
+  /* Optional: smooth glassy effect */
+  box-shadow: 0 2px 6px alpha(@background, 0.4);
 }
 
 #workspaces button {
@@ -57,7 +69,7 @@
 
 #custom-expand-icon {
   margin-right: 7px;
-  margin-left: 7px;
+  margin-left: 8px;
 }
 
 tooltip {

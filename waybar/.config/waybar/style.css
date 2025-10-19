@@ -3,6 +3,7 @@
 * {
   background-color: @background;
   color: @foreground;
+  opacity: 1;
 
   border: none;
   border-radius: 0;
@@ -11,12 +12,35 @@
   font-size: 12px;
 }
 
-.modules-left {
-  margin-left: 8px;
+#waybar {
+    background-color: rgba(38, 42, 51, 0); /* #262A33 with 20% opacity */
+    color: @foreground;
 }
 
+.modules-left {
+  background-color: alpha(@accent, 0.50);
+  border-radius: 20px;          /* Makes the bubble shape */
+  padding: 4px 10px;            /* Adds inner spacing */
+  margin: 4px 8px;             /* Keeps distance from edges */
+  /* Optional: smooth glassy effect */
+  box-shadow: 0 2px 6px alpha(@background, 0.4); }
+
 .modules-right {
-  margin-right: 8px;
+  background-color: alpha(@accent, 0.50);
+  border-radius: 20px;          /* Makes the bubble shape */
+  padding: 4px 10px;            /* Adds inner spacing */
+  margin: 4px 8px;              /* Keeps distance from edges */
+  /* Optional: smooth glassy effect */
+  box-shadow: 0 2px 6px alpha(@background, 0.4); 
+}
+
+.modules-center {
+  background-color: alpha(@accent, 0.50);
+  border-radius: 20px;          /* Makes the bubble shape */
+  padding: 4px 10px;            /* Adds inner spacing */
+  margin: 4px 8px;              /* Keeps distance from edges */
+  /* Optional: smooth glassy effect */
+  box-shadow: 0 2px 6px alpha(@background, 0.4);
 }
 
 #workspaces button {
@@ -45,6 +69,7 @@
 
 #custom-expand-icon {
   margin-right: 7px;
+  margin-left: 8px;
 }
 
 tooltip {

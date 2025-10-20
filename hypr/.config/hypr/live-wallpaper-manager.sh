@@ -22,8 +22,20 @@ for cmd in "${REQUIRED_CMDS[@]}"; do
   fi
 done
 
+# --- CHECK IF MANAGER IS DISABLED ---
+TOGGLE_STATE_FILE="$HOME/.cache/live_wallpaper_state"
+if [ -f "$TOGGLE_STATE_FILE" ] && [ "$(cat "$TOGGLE_STATE_FILE")" = "stopped" ]; then
+  rm -f "$LOCKFILE"
+  exit 0
+fi
+
 # --- CORE LOGIC LOOP ---
 while true; do
+  # Check if manager should be stopped
+  if [ -f "$TOGGLE_STATE_FILE" ] && [ "$(cat "$TOGGLE_STATE_FILE")" = "stopped" ]; then
+    rm -f "$LOCKFILE"
+    exit 0
+  fi
   THEME_DIR="$HOME/.config/omarchy/current/theme"
   if [ ! -d "$THEME_DIR" ]; then
     sleep 60

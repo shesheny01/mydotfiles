@@ -16,6 +16,14 @@ for cmd in "${REQUIRED_CMDS[@]}"; do
   fi
 done
 
+# --- CHECK IF MANAGER IS RUNNING ---
+TOGGLE_STATE_FILE="$HOME/.cache/live_wallpaper_state"
+if [ -f "$TOGGLE_STATE_FILE" ] && [ "$(cat "$TOGGLE_STATE_FILE")" = "stopped" ]; then
+    # If manager is stopped, start it and change wallpaper
+    echo "running" > "$TOGGLE_STATE_FILE"
+    # Continue with wallpaper change...
+fi
+
 THEME_DIR="$HOME/.config/omarchy/current/theme"
 LIVE_WALLPAPER_DIR="$THEME_DIR/backgrounds/live"
 

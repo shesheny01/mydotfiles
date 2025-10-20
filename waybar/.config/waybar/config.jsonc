@@ -137,7 +137,7 @@
   },
   "hyprland/language": {
     "format": "{}",
-    "on-click": "hyprctl switchxkblayout your-keyboard-name-here next",
+    "on-click": "hyprctl switchxkblayout hl-virtual-keyboard-fcitx5 next",
     "spacing": 12,
 }
 }
